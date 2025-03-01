@@ -1,0 +1,212 @@
+{
+	"info": {
+		"_postman_id": "57c89ad8-ec55-48b3-b3e8-4b7301359c80",
+		"name": "LoginSystem",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "24448238"
+	},
+	"item": [
+		{
+			"name": "Person",
+			"item": [
+				{
+					"name": "Listar Personas - Paginado",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://localhost:7232/api/Person"
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Personas - Select",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://localhost:7232/api/Person/Select"
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Persona por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://localhost:7232/api/Person/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Registrar Persona",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"Litzi\",\r\n  \"lastName\": \"Moreira\",\r\n  \"identityCard\": \"1008882741\",\r\n  \"birthDate\": \"1990-01-01\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://localhost:7232/api/Person/Register"
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Persona",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"Juan\",\r\n  \"lastName\": \"Pérez\",\r\n  \"identityCard\": \"1234567890\",\r\n  \"birthDate\": \"1990-01-01\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://localhost:7232/api/Person/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Persona",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "https://localhost:7232/api/Person/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Listar Usuarios - Paginado",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numPage\": 1,\r\n    \"numRecordsPage\": 10,\r\n    \"order\": \"asc\",\r\n    \"sort\": \"Id\"\r\n}\r\n\r\n{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://localhost:7232/api/User"
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Usuarios - Select",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://localhost:7232/api/User/Select"
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Usuario por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://localhost:7232/api/User/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Registrar Usuario",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"GokuLoco8\",\r\n  \"password\": \"Password!\",\r\n  \"status\": \"Active\",\r\n  \"personId\": 8\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://localhost:7232/api/User/Register"
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Usuario",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"Usuario01Mod\",\r\n  \"password\": \"Password1!\",\r\n  \"status\": \"Active\",\r\n  \"personId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://localhost:7232/api/User/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Usuario",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "https://localhost:7232/api/User/1"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

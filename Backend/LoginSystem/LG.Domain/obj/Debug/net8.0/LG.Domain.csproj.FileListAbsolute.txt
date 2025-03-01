@@ -1,0 +1,14 @@
+C:\Users\Bruno\Desktop\Archivos_principales\Viamatica\Entrenamiento\LoginSystem\LG.Domain\bin\Debug\net8.0\LG.Domain.deps.json
+C:\Users\Bruno\Desktop\Archivos_principales\Viamatica\Entrenamiento\LoginSystem\LG.Domain\bin\Debug\net8.0\LG.Domain.runtimeconfig.json
+C:\Users\Bruno\Desktop\Archivos_principales\Viamatica\Entrenamiento\LoginSystem\LG.Domain\bin\Debug\net8.0\LG.Domain.dll
+C:\Users\Bruno\Desktop\Archivos_principales\Viamatica\Entrenamiento\LoginSystem\LG.Domain\bin\Debug\net8.0\LG.Domain.pdb
+C:\Users\Bruno\Desktop\Archivos_principales\Viamatica\Entrenamiento\LoginSystem\LG.Domain\obj\Debug\net8.0\LG.Domain.csproj.AssemblyReference.cache
+C:\Users\Bruno\Desktop\Archivos_principales\Viamatica\Entrenamiento\LoginSystem\LG.Domain\obj\Debug\net8.0\LG.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Bruno\Desktop\Archivos_principales\Viamatica\Entrenamiento\LoginSystem\LG.Domain\obj\Debug\net8.0\LG.Domain.AssemblyInfoInputs.cache
+C:\Users\Bruno\Desktop\Archivos_principales\Viamatica\Entrenamiento\LoginSystem\LG.Domain\obj\Debug\net8.0\LG.Domain.AssemblyInfo.cs
+C:\Users\Bruno\Desktop\Archivos_principales\Viamatica\Entrenamiento\LoginSystem\LG.Domain\obj\Debug\net8.0\LG.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Bruno\Desktop\Archivos_principales\Viamatica\Entrenamiento\LoginSystem\LG.Domain\obj\Debug\net8.0\LG.Domain.dll
+C:\Users\Bruno\Desktop\Archivos_principales\Viamatica\Entrenamiento\LoginSystem\LG.Domain\obj\Debug\net8.0\refint\LG.Domain.dll
+C:\Users\Bruno\Desktop\Archivos_principales\Viamatica\Entrenamiento\LoginSystem\LG.Domain\obj\Debug\net8.0\LG.Domain.pdb
+C:\Users\Bruno\Desktop\Archivos_principales\Viamatica\Entrenamiento\LoginSystem\LG.Domain\obj\Debug\net8.0\LG.Domain.genruntimeconfig.cache
+C:\Users\Bruno\Desktop\Archivos_principales\Viamatica\Entrenamiento\LoginSystem\LG.Domain\obj\Debug\net8.0\ref\LG.Domain.dll

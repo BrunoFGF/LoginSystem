@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\LG.Api.props" />
+</Project>

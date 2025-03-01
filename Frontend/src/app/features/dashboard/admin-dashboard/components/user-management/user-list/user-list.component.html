@@ -1,0 +1,49 @@
+<div class="user-list-container">
+  <div class="header">
+    <h2>Gestión de Usuarios</h2>
+    <button class="btn-primary" routerLink="./new">Nuevo Usuario</button>
+  </div>
+
+  <app-search (search)="onSearch($event)"></app-search>
+
+  <div class="table-responsive" *ngIf="!loading; else loadingTemplate">
+    <table class="table">
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>Usuario</th>
+        <th>Email</th>
+        <th>Estado</th>
+        <th>Persona</th>
+        <th>Fecha de Creación</th>
+        <th>Acciones</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.userId }}</td>
+        <td>{{ user.username }}</td>
+        <td>{{ user.mail }}</td>
+        <td>{{ user.status }}</td>
+        <td>{{ user.person?.firstName }} {{ user.person?.lastName }}</td>
+        <td>{{ user.auditCreateDate | date:'dd/MM/yyyy' }}</td>
+        <td>
+          <button class="btn-edit" [routerLink]="['./', user.userId]">Editar</button>
+          <button class="btn-delete" (click)="deleteUser(user.userId)">Eliminar</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <ng-template #loadingTemplate>
+    <div class="loading">Cargando usuarios...</div>
+  </ng-template>
+
+  <app-pagination
+    [totalItems]="totalItems"
+    [pageSize]="filters.pageSize || 10"
+    [currentPage]="filters.pageNum || 1"
+    (pageChange)="onPageChange($event)">
+  </app-pagination>
+</div>

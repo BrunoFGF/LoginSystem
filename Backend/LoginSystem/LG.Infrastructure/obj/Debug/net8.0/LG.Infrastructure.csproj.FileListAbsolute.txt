@@ -1,0 +1,17 @@
+C:\Users\Bruno\Desktop\Archivos_principales\Viamatica\Entrenamiento\LoginSystem\LG.Infrastructure\bin\Debug\net8.0\LG.Infrastructure.deps.json
+C:\Users\Bruno\Desktop\Archivos_principales\Viamatica\Entrenamiento\LoginSystem\LG.Infrastructure\bin\Debug\net8.0\LG.Infrastructure.dll
+C:\Users\Bruno\Desktop\Archivos_principales\Viamatica\Entrenamiento\LoginSystem\LG.Infrastructure\bin\Debug\net8.0\LG.Infrastructure.pdb
+C:\Users\Bruno\Desktop\Archivos_principales\Viamatica\Entrenamiento\LoginSystem\LG.Infrastructure\bin\Debug\net8.0\LG.Domain.dll
+C:\Users\Bruno\Desktop\Archivos_principales\Viamatica\Entrenamiento\LoginSystem\LG.Infrastructure\bin\Debug\net8.0\LG.Utilities.dll
+C:\Users\Bruno\Desktop\Archivos_principales\Viamatica\Entrenamiento\LoginSystem\LG.Infrastructure\bin\Debug\net8.0\LG.Domain.pdb
+C:\Users\Bruno\Desktop\Archivos_principales\Viamatica\Entrenamiento\LoginSystem\LG.Infrastructure\bin\Debug\net8.0\LG.Utilities.pdb
+C:\Users\Bruno\Desktop\Archivos_principales\Viamatica\Entrenamiento\LoginSystem\LG.Infrastructure\obj\Debug\net8.0\LG.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Bruno\Desktop\Archivos_principales\Viamatica\Entrenamiento\LoginSystem\LG.Infrastructure\obj\Debug\net8.0\LG.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Bruno\Desktop\Archivos_principales\Viamatica\Entrenamiento\LoginSystem\LG.Infrastructure\obj\Debug\net8.0\LG.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Bruno\Desktop\Archivos_principales\Viamatica\Entrenamiento\LoginSystem\LG.Infrastructure\obj\Debug\net8.0\LG.Infrastructure.AssemblyInfo.cs
+C:\Users\Bruno\Desktop\Archivos_principales\Viamatica\Entrenamiento\LoginSystem\LG.Infrastructure\obj\Debug\net8.0\LG.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Bruno\Desktop\Archivos_principales\Viamatica\Entrenamiento\LoginSystem\LG.Infrastructure\obj\Debug\net8.0\LG.Infra.CC305EF5.Up2Date
+C:\Users\Bruno\Desktop\Archivos_principales\Viamatica\Entrenamiento\LoginSystem\LG.Infrastructure\obj\Debug\net8.0\LG.Infrastructure.dll
+C:\Users\Bruno\Desktop\Archivos_principales\Viamatica\Entrenamiento\LoginSystem\LG.Infrastructure\obj\Debug\net8.0\refint\LG.Infrastructure.dll
+C:\Users\Bruno\Desktop\Archivos_principales\Viamatica\Entrenamiento\LoginSystem\LG.Infrastructure\obj\Debug\net8.0\LG.Infrastructure.pdb
+C:\Users\Bruno\Desktop\Archivos_principales\Viamatica\Entrenamiento\LoginSystem\LG.Infrastructure\obj\Debug\net8.0\ref\LG.Infrastructure.dll
