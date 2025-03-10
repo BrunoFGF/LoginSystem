@@ -1,0 +1,21 @@
+<nav class="navbar">
+  <div class="navbar-content">
+    <div class="navbar-title">
+      <h1>Dashboard</h1>
+    </div>
+
+    <div class="navbar-actions">
+      <div class="user-info dropdown">
+        <button class="dropbtn">
+          <span class="user-name">{{ username }}</span>
+          <span class="user-role">({{ userRole }})</span>
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a [routerLink]="['/profile']">Mi Perfil</a>
+          <a (click)="logout()">Cerrar Sesión</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

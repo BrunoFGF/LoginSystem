@@ -1,0 +1,30 @@
+<div class="dashboard-container">
+  <div class="welcome-section">
+    <h1>Bienvenido, {{ username }}</h1>
+    <p>¡Ha iniciado sesión correctamente como {{ userRole }}!</p>
+  </div>
+
+  <div class="dashboard-cards">
+
+    <div class="card">
+      <div class="card-icon">
+        <i class="fa fa-user"></i>
+      </div>
+      <div class="card-content">
+        <h3>Mi Perfil</h3>
+        <p>Administre su información personal.</p>
+      </div>
+    </div>
+
+    <div class="card" *ngIf="isAdmin">
+      <div class="card-icon admin-icon">
+        <i class="fa fa-users"></i>
+      </div>
+      <div class="card-content">
+        <h3>Gestión de Usuarios</h3>
+        <p>Administre usuarios.</p>
+      </div>
+    </div>
+
+  </div>
+</div>

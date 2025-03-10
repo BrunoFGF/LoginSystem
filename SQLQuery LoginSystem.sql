@@ -52,11 +52,11 @@ GO
 CREATE TABLE Users (
     UserId INT PRIMARY KEY IDENTITY(1,1),
     Username VARCHAR(20) NOT NULL UNIQUE,
-    Password VARCHAR(50) NOT NULL,
+    Password VARCHAR(MAX) NOT NULL,
     Mail VARCHAR(120) NOT NULL UNIQUE,
     SessionActive CHAR(1) DEFAULT '0',
     PersonId INT NULL,
-    Status VARCHAR(20) DEFAULT 'ACTIVO',
+    Status VARCHAR(20) DEFAULT 'Active',
     FailedAttempts INT DEFAULT 0,
     AuditCreateUser INT NULL,
     AuditCreateDate DATETIME NULL,
@@ -154,4 +154,47 @@ BEGIN
     -- Marcar al usuario como inactivo
     UPDATE Users SET SessionActive = '0' WHERE UserId = @UserId;
 END;
+GO 
+
+CREATE PROCEDURE GetActiveSessions
+AS
+BEGIN
+    SELECT U.UserId, U.Username, U.SessionActive, 
+           S.EntryDate, S.CloseDate
+    FROM Users U
+    LEFT JOIN User_sessions S ON U.UserId = S.UserId AND S.CloseDate IS NULL;
+END;
+
 GO
+INSERT INTO Rol (RolName, AuditCreateDate)
+VALUES ('ADMIN', GETDATE()),
+       ('USER', GETDATE());
+
+
+GO
+DECLARE @PersonId INT, @UserId INT, @RolId INT;
+
+-- Insertar la persona en la tabla Person
+INSERT INTO Person (FirstName, LastName, IdentityCard, BirthDate, AuditCreateUser, AuditCreateDate)
+VALUES ('Sebastian Ricardo', 'Rodriguez', '1231231231', '1990-01-01', 1, GETDATE());
+
+-- Obtener el ID de la persona recién insertada
+SET @PersonId = SCOPE_IDENTITY();
+
+-- Insertar el usuario en la tabla Users
+INSERT INTO Users (Username, Password, Mail, SessionActive, PersonId, Status, FailedAttempts, AuditCreateUser, AuditCreateDate)
+VALUES ('Administrador100', '$2a$11$HLGFRyxb8MMYLl.Ohbiquep96IpdEfieT.jX.YgdYt0sbZzp6d.DO', 'srodriguez@mail.com', NULL, @PersonId, 'Active', NULL, 1, GETDATE());
+
+-- Obtener el ID del usuario recién insertado
+SET @UserId = SCOPE_IDENTITY();
+
+-- Obtener el ID del rol ADMIN
+SELECT @RolId = RolId FROM Rol WHERE RolName = 'ADMIN';
+
+-- Asignar el rol ADMIN al usuario
+INSERT INTO User_rol (RolId, UserId, AuditCreateUser, AuditCreateDate)
+VALUES (@RolId, @UserId, 1, GETDATE());
+
+GO
+
+

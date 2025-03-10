@@ -1,0 +1,132 @@
+<div class="profile-container">
+  <div class="profile-header">
+    <h1>Mi Perfil</h1>
+    <p>Administre su información personal y preferencias</p>
+  </div>
+
+  <div class="profile-content">
+    <div class="card">
+      <div class="card-header">
+        <h2>Información Personal</h2>
+      </div>
+
+      <div class="card-body">
+        <div *ngIf="loading" class="loading-spinner">
+          <div class="spinner"></div>
+        </div>
+
+        <div *ngIf="success" class="alert alert-success">
+          Perfil actualizado correctamente.
+        </div>
+
+        <div *ngIf="error" class="alert alert-danger">
+          {{ error }}
+        </div>
+
+        <form [formGroup]="profileForm" (ngSubmit)="onSubmit()" *ngIf="!loading || accountData">
+          <div class="form-group">
+            <label for="username">Nombre de Usuario</label>
+            <input
+              type="text"
+              id="username"
+              formControlName="username"
+              [ngClass]="{'is-invalid': profileForm.get('username')?.invalid && profileForm.get('username')?.touched}"
+            >
+            <div *ngIf="profileForm.get('username')?.invalid && profileForm.get('username')?.touched" class="invalid-feedback">
+              El nombre de usuario es requerido
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="firstName">Nombre</label>
+            <input
+              type="text"
+              id="firstName"
+              formControlName="firstName"
+              [ngClass]="{'is-invalid': profileForm.get('firstName')?.invalid && profileForm.get('firstName')?.touched}"
+            >
+            <div *ngIf="profileForm.get('firstName')?.invalid && profileForm.get('firstName')?.touched" class="invalid-feedback">
+              El nombre es requerido
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="lastName">Apellido</label>
+            <input
+              type="text"
+              id="lastName"
+              formControlName="lastName"
+              [ngClass]="{'is-invalid': profileForm.get('lastName')?.invalid && profileForm.get('lastName')?.touched}"
+            >
+            <div *ngIf="profileForm.get('lastName')?.invalid && profileForm.get('lastName')?.touched" class="invalid-feedback">
+              El apellido es requerido
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="identityCard">Documento de Identidad</label>
+            <input
+              type="text"
+              id="identityCard"
+              formControlName="identityCard"
+              [ngClass]="{'is-invalid': profileForm.get('identityCard')?.invalid && profileForm.get('identityCard')?.touched}"
+            >
+            <div *ngIf="profileForm.get('identityCard')?.invalid && profileForm.get('identityCard')?.touched" class="invalid-feedback">
+              El documento de identidad es requerido
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="birthDate">Fecha de Nacimiento</label>
+            <input
+              type="date"
+              id="birthDate"
+              formControlName="birthDate"
+              [ngClass]="{'is-invalid': profileForm.get('birthDate')?.invalid && profileForm.get('birthDate')?.touched}"
+            >
+            <div *ngIf="profileForm.get('birthDate')?.invalid && profileForm.get('birthDate')?.touched" class="invalid-feedback">
+              La fecha de nacimiento es requerida
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Contraseña (Dejar en blanco para mantener la actual)</label>
+            <input
+              type="password"
+              id="password"
+              formControlName="password"
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="confirmPassword">Confirmar Contraseña</label>
+            <input
+              type="password"
+              id="confirmPassword"
+              formControlName="confirmPassword"
+            >
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary" [disabled]="profileForm.invalid || loading">
+              <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+              Actualizar Perfil
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="card" *ngIf="accountData">
+      <div class="card-header">
+        <h2>Resumen de la Cuenta</h2>
+      </div>
+      <div class="card-body">
+        <div class="account-summary">
+          <p><strong>Estado de la cuenta:</strong> {{ accountData.status }}</p>
+          <p><strong>Correo:</strong> {{ accountData.mail }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

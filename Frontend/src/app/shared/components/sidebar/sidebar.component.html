@@ -1,0 +1,24 @@
+<div class="sidebar" [ngClass]="{'collapsed': isCollapsed}">
+  <div class="sidebar-header">
+    <h3 class="app-title">Mi Aplicación</h3>
+    <button class="toggle-btn" (click)="toggleSidebar()">
+      <i class="fa" [ngClass]="isCollapsed ? 'fa-angle-right' : 'fa-angle-left'"></i>
+    </button>
+  </div>
+
+  <ul class="sidebar-menu">
+    <li *ngFor="let item of menuItems" class="sidebar-item">
+      <a [routerLink]="[item.route]" routerLinkActive="active" class="sidebar-link">
+        <i class="fa {{item.icon}}"></i>
+        <span *ngIf="!isCollapsed">{{item.label}}</span>
+      </a>
+    </li>
+  </ul>
+
+  <div class="sidebar-footer">
+    <a (click)="logout()" title="Cerrar Sesión">
+      <i class="fa fa-sign-out-alt"></i>
+      <span *ngIf="!isCollapsed">Cerrar Sesión</span>
+    </a>
+  </div>
+</div>

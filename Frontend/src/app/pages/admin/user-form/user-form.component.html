@@ -1,0 +1,128 @@
+<div class="user-form-container">
+  <h2 class="form-title">{{ isEditMode ? 'Editar' : 'Registrar' }} Usuario</h2>
+
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
+
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="user-form">
+    <div class="form-section">
+      <h3>Información Personal</h3>
+
+      <div class="form-group">
+        <label for="firstName">Nombre *</label>
+        <input
+          id="firstName"
+          type="text"
+          formControlName="firstName"
+          [class.invalid]="hasError('firstName', 'required') || hasError('firstName', 'minlength') || hasError('firstName', 'maxlength')"
+        >
+        <div class="error-message" *ngIf="hasError('firstName', 'required') || hasError('firstName', 'minlength') || hasError('firstName', 'maxlength')">
+          {{ getErrorMessage('firstName') }}
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="lastName">Apellido *</label>
+        <input
+          id="lastName"
+          type="text"
+          formControlName="lastName"
+          [class.invalid]="hasError('lastName', 'required') || hasError('lastName', 'minlength') || hasError('lastName', 'maxlength')"
+        >
+        <div class="error-message" *ngIf="hasError('lastName', 'required') || hasError('lastName', 'minlength') || hasError('lastName', 'maxlength')">
+          {{ getErrorMessage('lastName') }}
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="identityCard">Documento de Identidad *</label>
+        <input
+          id="identityCard"
+          type="text"
+          formControlName="identityCard"
+          [class.invalid]="hasError('identityCard', 'required') || hasError('identityCard', 'pattern') || hasError('identityCard', 'maxlength')"
+        >
+        <div class="error-message" *ngIf="hasError('identityCard', 'required') || hasError('identityCard', 'pattern') || hasError('identityCard', 'maxlength')">
+          {{ getErrorMessage('identityCard') }}
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="birthDate">Fecha de Nacimiento</label>
+        <input
+          id="birthDate"
+          type="date"
+          formControlName="birthDate"
+        >
+      </div>
+    </div>
+
+    <div class="form-section">
+      <h3>Información de Cuenta</h3>
+
+      <div class="form-group">
+        <label for="username">Nombre de Usuario *</label>
+        <input
+          id="username"
+          type="text"
+          formControlName="username"
+          [class.invalid]="hasError('username', 'required') || hasError('username', 'minlength') || hasError('username', 'maxlength') || hasError('username', 'pattern')"
+        >
+        <div class="error-message" *ngIf="hasError('username', 'required') || hasError('username', 'minlength') || hasError('username', 'maxlength') || hasError('username', 'pattern')">
+          {{ getErrorMessage('username') }}
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Contraseña *</label>
+        <div class="password-container">
+          <input
+            id="password"
+            [type]="passwordVisible ? 'text' : 'password'"
+            formControlName="password"
+            class="password-input"
+            [class.invalid]="hasError('password', 'required')"
+          />
+          <span (click)="togglePasswordVisibility()" class="eye-icon">
+      <i [ngClass]="passwordVisible ? 'fa fa-eye-slash' : 'fa fa-eye'"></i>
+    </span>
+        </div>
+        <div *ngIf="hasError('password', 'required')" class="error-message">
+          {{ getErrorMessage('password') }}
+        </div>
+      </div>
+
+
+      <div class="form-group">
+        <label for="status">Estado</label>
+        <select id="status" formControlName="status">
+          <option value="Active">Activo</option>
+          <option value="Inactive">Inactivo</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="rolName">Rol *</label>
+        <select
+          id="rolName"
+          formControlName="rolName"
+          [class.invalid]="hasError('rolName', 'required')"
+        >
+          <option *ngFor="let rol of roles" [value]="rol">{{ rol }}</option>
+        </select>
+        <div class="error-message" *ngIf="hasError('rolName', 'required')">
+          {{ getErrorMessage('rolName') }}
+        </div>
+      </div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="form-actions">
+      <button type="button" class="btn btn-cancel" (click)="onCancel()">Cancelar</button>
+      <button type="submit" class="btn btn-submit" [disabled]="loading">
+        {{ loading ? 'Guardando...' : (isEditMode ? 'Actualizar' : 'Registrar') }}
+      </button>
+    </div>
+  </form>
+</div>
