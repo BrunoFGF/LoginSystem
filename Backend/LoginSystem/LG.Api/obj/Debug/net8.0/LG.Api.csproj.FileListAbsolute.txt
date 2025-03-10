@@ -10,10 +10,12 @@ C:\Users\Bruno\Desktop\Archivos_principales\Viamatica\Entrenamiento\LoginSystem\
 C:\Users\Bruno\Desktop\Archivos_principales\Viamatica\Entrenamiento\LoginSystem\LG.Api\bin\Debug\net8.0\AutoMapper.dll
 C:\Users\Bruno\Desktop\Archivos_principales\Viamatica\Entrenamiento\LoginSystem\LG.Api\bin\Debug\net8.0\Azure.Core.dll
 C:\Users\Bruno\Desktop\Archivos_principales\Viamatica\Entrenamiento\LoginSystem\LG.Api\bin\Debug\net8.0\Azure.Identity.dll
+C:\Users\Bruno\Desktop\Archivos_principales\Viamatica\Entrenamiento\LoginSystem\LG.Api\bin\Debug\net8.0\BCrypt.Net-Next.dll
 C:\Users\Bruno\Desktop\Archivos_principales\Viamatica\Entrenamiento\LoginSystem\LG.Api\bin\Debug\net8.0\FluentValidation.dll
 C:\Users\Bruno\Desktop\Archivos_principales\Viamatica\Entrenamiento\LoginSystem\LG.Api\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
 C:\Users\Bruno\Desktop\Archivos_principales\Viamatica\Entrenamiento\LoginSystem\LG.Api\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\Users\Bruno\Desktop\Archivos_principales\Viamatica\Entrenamiento\LoginSystem\LG.Api\bin\Debug\net8.0\Humanizer.dll
+C:\Users\Bruno\Desktop\Archivos_principales\Viamatica\Entrenamiento\LoginSystem\LG.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\Bruno\Desktop\Archivos_principales\Viamatica\Entrenamiento\LoginSystem\LG.Api\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\Bruno\Desktop\Archivos_principales\Viamatica\Entrenamiento\LoginSystem\LG.Api\bin\Debug\net8.0\Microsoft.Build.Locator.dll
 C:\Users\Bruno\Desktop\Archivos_principales\Viamatica\Entrenamiento\LoginSystem\LG.Api\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll

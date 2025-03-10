@@ -1,142 +1,90 @@
 [
   {
-    "ContainingType": "LG.Api.Controllers.PersonController",
-    "Method": "ListPersons",
-    "RelativePath": "api/Person",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "NumFilter",
-        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": false
-      },
-      {
-        "Name": "TextFilter",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "StateFilter",
-        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": false
-      },
-      {
-        "Name": "StartDate",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "EndDate",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "NumPage",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "NumRecordsPage",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "Order",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Sort",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Records",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "LG.Api.Controllers.PersonController",
-    "Method": "PersonById",
-    "RelativePath": "api/Person/{personId}",
+    "ContainingType": "LG.Api.Controllers.AccountController",
+    "Method": "GetAccount",
+    "RelativePath": "api/Account",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [
+    "Parameters": [],
+    "ReturnTypes": [
       {
-        "Name": "personId",
-        "Type": "System.Int32",
-        "IsRequired": true
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 404
       }
-    ],
-    "ReturnTypes": []
+    ]
   },
   {
-    "ContainingType": "LG.Api.Controllers.PersonController",
-    "Method": "EditPerson",
-    "RelativePath": "api/Person/{personId}",
+    "ContainingType": "LG.Api.Controllers.AccountController",
+    "Method": "UpdateAccount",
+    "RelativePath": "api/Account/Update",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "personId",
-        "Type": "System.Int32",
+        "Name": "request",
+        "Type": "LG.Application.Dtos.Account.Request.AccountRequestDto",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
       },
       {
-        "Name": "request",
-        "Type": "LG.Application.Dtos.Person.Request.PersonRequestDto",
-        "IsRequired": true
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
       }
-    ],
-    "ReturnTypes": []
+    ]
   },
   {
-    "ContainingType": "LG.Api.Controllers.PersonController",
-    "Method": "RemovePerson",
-    "RelativePath": "api/Person/{personId}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "personId",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "LG.Api.Controllers.PersonController",
-    "Method": "RegisterPerson",
-    "RelativePath": "api/Person/Register",
+    "ContainingType": "LG.Api.Controllers.RoleController",
+    "Method": "AssignRoles",
+    "RelativePath": "api/Role/assign",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "request",
-        "Type": "LG.Application.Dtos.Person.Request.PersonRequestDto",
+        "Type": "LG.Application.Dtos.Role.Request.AssignRolesRequestDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "LG.Api.Controllers.PersonController",
-    "Method": "ListSelectPersons",
-    "RelativePath": "api/Person/Select",
+    "ContainingType": "LG.Api.Controllers.RoleController",
+    "Method": "GetUserRoles",
+    "RelativePath": "api/Role/user/{userId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {
@@ -148,54 +96,9 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "NumFilter",
-        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": false
-      },
-      {
-        "Name": "TextFilter",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "StateFilter",
-        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": false
-      },
-      {
-        "Name": "StartDate",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "EndDate",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "NumPage",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "NumRecordsPage",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "Order",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Sort",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Records",
-        "Type": "System.Int32",
-        "IsRequired": false
+        "Name": "filters",
+        "Type": "LG.Domain.Commons.Bases.Request.BaseFiltersRequest",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -231,7 +134,7 @@
       },
       {
         "Name": "request",
-        "Type": "LG.Application.Dtos.User.Request.UserRequestDto",
+        "Type": "LG.Application.Dtos.User.Request.UpdateUserRequestDto",
         "IsRequired": true
       }
     ],
@@ -255,6 +158,22 @@
   },
   {
     "ContainingType": "LG.Api.Controllers.UserController",
+    "Method": "GenerateToken",
+    "RelativePath": "api/User/Generate/Token",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "requestDto",
+        "Type": "LG.Application.Dtos.User.Request.TokenRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LG.Api.Controllers.UserController",
     "Method": "RegisterUser",
     "RelativePath": "api/User/Register",
     "HttpMethod": "POST",
@@ -263,7 +182,7 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "LG.Application.Dtos.User.Request.UserRequestDto",
+        "Type": "LG.Application.Dtos.User.Request.CreateUserRequestDto",
         "IsRequired": true
       }
     ],

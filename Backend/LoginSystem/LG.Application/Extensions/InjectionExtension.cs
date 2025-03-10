@@ -1,6 +1,8 @@
 ﻿using FluentValidation.AspNetCore;
 using LG.Application.Interfaces;
 using LG.Application.Services;
+using LG.Domain.Services;
+using LG.Infrastructure.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
@@ -19,8 +21,11 @@ namespace LG.Application.Extensions
             });
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
-            services.AddScoped<IPersonApplication, PersonApplication>();
             services.AddScoped<IUserApplication, UserApplication>();
+
+            services.AddScoped<IRoleApplication, RoleApplication>();
+            services.AddScoped<IAccountApplication, AccountApplication>();
+            services.AddScoped<ICurrentSessionService, CurrentSessionService>();
 
             return services;
         }

@@ -1,6 +1,8 @@
-﻿using LG.Infrastructure.Persistences.Contexts;
-using LG.Infrastructure.Persistences.Interfaces;
+﻿using LG.Domain.Repositories;
+using LG.Domain.Services;
+using LG.Infrastructure.Persistences.Contexts;
 using LG.Infrastructure.Persistences.Repositories;
+using LG.Infrastructure.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -19,6 +21,7 @@ namespace LG.Infrastructure.Extensions
 
             services.AddTransient<IUnitOfWork, UnitOfWork>();
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+            services.AddScoped<ICurrentSessionService, CurrentSessionService>();
 
             return services;
         }

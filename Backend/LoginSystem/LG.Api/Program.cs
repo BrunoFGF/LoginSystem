@@ -1,3 +1,4 @@
+using LG.Api.Extensions;
 using LG.Application.Extensions;
 using LG.Infrastructure.Extensions;
 
@@ -6,8 +7,11 @@ var Configuration = builder.Configuration;
 
 var Cors = "Cors";
 
+builder.Services.AddHttpContextAccessor();
 builder.Services.AddInjectionInfrastructure(Configuration);
 builder.Services.AddInjectionApplication(Configuration);
+builder.Services.AddAuthentication(Configuration);
+
 
 builder.Services.AddControllers();
 
@@ -27,7 +31,10 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
-app.UseCors(Cors);
+app.UseCors(builder => builder
+    .AllowAnyOrigin()
+    .AllowAnyMethod()
+    .AllowAnyHeader());
 
 if (app.Environment.IsDevelopment())
 {
@@ -36,6 +43,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 

@@ -5,159 +5,58 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/Person": {
-      "post": {
+    "/api/Account": {
+      "get": {
         "tags": [
-          "Person"
-        ],
-        "parameters": [
-          {
-            "name": "NumFilter",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "TextFilter",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "StateFilter",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "StartDate",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "EndDate",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "NumPage",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "NumRecordsPage",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "Order",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Sort",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Records",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
+          "Account"
         ],
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
           }
         }
       }
     },
-    "/api/Person/Select": {
-      "get": {
-        "tags": [
-          "Person"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Person/{personId}": {
-      "get": {
-        "tags": [
-          "Person"
-        ],
-        "parameters": [
-          {
-            "name": "personId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
+    "/api/Account/Update": {
       "put": {
         "tags": [
-          "Person"
-        ],
-        "parameters": [
-          {
-            "name": "personId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
+          "Account"
         ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/PersonRequestDto"
+                "$ref": "#/components/schemas/AccountRequestDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/PersonRequestDto"
+                "$ref": "#/components/schemas/AccountRequestDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/PersonRequestDto"
+                "$ref": "#/components/schemas/AccountRequestDto"
               }
             }
           }
@@ -165,16 +64,38 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
           }
         }
-      },
-      "delete": {
+      }
+    },
+    "/api/Role/user/{userId}": {
+      "get": {
         "tags": [
-          "Person"
+          "Role"
         ],
         "parameters": [
           {
-            "name": "personId",
+            "name": "userId",
             "in": "path",
             "required": true,
             "schema": {
@@ -190,26 +111,26 @@
         }
       }
     },
-    "/api/Person/Register": {
+    "/api/Role/assign": {
       "post": {
         "tags": [
-          "Person"
+          "Role"
         ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/PersonRequestDto"
+                "$ref": "#/components/schemas/AssignRolesRequestDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/PersonRequestDto"
+                "$ref": "#/components/schemas/AssignRolesRequestDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/PersonRequestDto"
+                "$ref": "#/components/schemas/AssignRolesRequestDto"
               }
             }
           }
@@ -226,83 +147,25 @@
         "tags": [
           "User"
         ],
-        "parameters": [
-          {
-            "name": "NumFilter",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "TextFilter",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "StateFilter",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "StartDate",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "EndDate",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "NumPage",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "NumRecordsPage",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "Order",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Sort",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Records",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BaseFiltersRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BaseFiltersRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BaseFiltersRequest"
+              }
             }
           }
-        ],
+        },
         "responses": {
           "200": {
             "description": "OK"
@@ -363,17 +226,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/UserRequestDto"
+                "$ref": "#/components/schemas/UpdateUserRequestDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/UserRequestDto"
+                "$ref": "#/components/schemas/UpdateUserRequestDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/UserRequestDto"
+                "$ref": "#/components/schemas/UpdateUserRequestDto"
               }
             }
           }
@@ -415,17 +278,48 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/UserRequestDto"
+                "$ref": "#/components/schemas/CreateUserRequestDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/UserRequestDto"
+                "$ref": "#/components/schemas/CreateUserRequestDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/UserRequestDto"
+                "$ref": "#/components/schemas/CreateUserRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/User/Generate/Token": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TokenRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TokenRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TokenRequestDto"
               }
             }
           }
@@ -440,11 +334,12 @@
   },
   "components": {
     "schemas": {
-      "PersonRequestDto": {
+      "AccountRequestDto": {
         "required": [
           "firstName",
           "identityCard",
-          "lastName"
+          "lastName",
+          "username"
         ],
         "type": "object",
         "properties": {
@@ -468,17 +363,7 @@
             "type": "string",
             "format": "date",
             "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "UserRequestDto": {
-        "required": [
-          "password",
-          "username"
-        ],
-        "type": "object",
-        "properties": {
+          },
           "username": {
             "maxLength": 20,
             "minLength": 8,
@@ -489,15 +374,233 @@
             "maxLength": 16,
             "minLength": 8,
             "pattern": "^(?!.*\\s)(?=.*[A-Z])(?=.*[\\W_]).{8,16}$",
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AssignRolesRequestDto": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "roleIds": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "nullable": true
+          },
+          "auditUserId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "BaseFiltersRequest": {
+        "type": "object",
+        "properties": {
+          "numPage": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "numRecordsPage": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "order": {
+            "type": "string",
+            "nullable": true
+          },
+          "sort": {
+            "type": "string",
+            "nullable": true
+          },
+          "records": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "numFilter": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "textFilter": {
+            "type": "string",
+            "nullable": true
+          },
+          "stateFilter": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "startDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "endDate": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateUserRequestDto": {
+        "required": [
+          "firstName",
+          "identityCard",
+          "lastName",
+          "password",
+          "rolName",
+          "username"
+        ],
+        "type": "object",
+        "properties": {
+          "firstName": {
+            "maxLength": 80,
+            "minLength": 2,
+            "type": "string"
+          },
+          "lastName": {
+            "maxLength": 80,
+            "minLength": 2,
+            "type": "string"
+          },
+          "identityCard": {
+            "maxLength": 10,
+            "minLength": 0,
+            "pattern": "^(?!.*(\\d)\\1{3})[0-9]{10}$",
+            "type": "string"
+          },
+          "birthDate": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          },
+          "username": {
+            "maxLength": 20,
+            "minLength": 8,
+            "pattern": "^(?!.*[\\W_])(?=.*[A-Z])(?=.*\\d)[A-Za-z\\d]{8,20}$",
             "type": "string"
           },
           "status": {
             "type": "string",
             "nullable": true
           },
-          "personId": {
+          "rolName": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "password": {
+            "maxLength": 16,
+            "minLength": 8,
+            "pattern": "^(?!.*\\s)(?=.*[A-Z])(?=.*[\\W_]).{8,16}$",
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProblemDetails": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "nullable": true
+          },
+          "detail": {
+            "type": "string",
+            "nullable": true
+          },
+          "instance": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": { }
+      },
+      "TokenRequestDto": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateUserRequestDto": {
+        "required": [
+          "firstName",
+          "identityCard",
+          "lastName",
+          "rolName",
+          "username"
+        ],
+        "type": "object",
+        "properties": {
+          "firstName": {
+            "maxLength": 80,
+            "minLength": 2,
+            "type": "string"
+          },
+          "lastName": {
+            "maxLength": 80,
+            "minLength": 2,
+            "type": "string"
+          },
+          "identityCard": {
+            "maxLength": 10,
+            "minLength": 0,
+            "pattern": "^(?!.*(\\d)\\1{3})[0-9]{10}$",
+            "type": "string"
+          },
+          "birthDate": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          },
+          "username": {
+            "maxLength": 20,
+            "minLength": 8,
+            "pattern": "^(?!.*[\\W_])(?=.*[A-Z])(?=.*\\d)[A-Za-z\\d]{8,20}$",
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "rolName": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "password": {
+            "maxLength": 16,
+            "minLength": 8,
+            "pattern": "^(?!.*\\s)(?=.*[A-Z])(?=.*[\\W_]).{8,16}$",
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false

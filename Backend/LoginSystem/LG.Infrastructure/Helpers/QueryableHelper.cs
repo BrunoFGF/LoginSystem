@@ -1,4 +1,4 @@
-﻿using LG.Infrastructure.Commons.Bases.Request;
+﻿using LG.Domain.Commons.Bases.Request;
 
 namespace LG.Infrastructure.Helpers
 {

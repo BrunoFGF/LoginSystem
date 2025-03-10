@@ -3,52 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Bruno\\Desktop\\Archivos_principales\\Viamatica\\Entrenamiento\\LoginSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A0194729-162E-4DA7-A693-B753776C7451}|LG.Application\\LG.Application.csproj|c:\\users\\bruno\\desktop\\archivos_principales\\viamatica\\entrenamiento\\loginsystem\\lg.application\\dtos\\user\\response\\userselectresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A0194729-162E-4DA7-A693-B753776C7451}|LG.Application\\LG.Application.csproj|solutionrelative:lg.application\\dtos\\user\\response\\userselectresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A0194729-162E-4DA7-A693-B753776C7451}|LG.Application\\LG.Application.csproj|c:\\users\\bruno\\desktop\\archivos_principales\\viamatica\\entrenamiento\\loginsystem\\lg.application\\dtos\\user\\response\\userresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A0194729-162E-4DA7-A693-B753776C7451}|LG.Application\\LG.Application.csproj|solutionrelative:lg.application\\dtos\\user\\response\\userresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A0194729-162E-4DA7-A693-B753776C7451}|LG.Application\\LG.Application.csproj|c:\\users\\bruno\\desktop\\archivos_principales\\viamatica\\entrenamiento\\loginsystem\\lg.application\\dtos\\user\\request\\userrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A0194729-162E-4DA7-A693-B753776C7451}|LG.Application\\LG.Application.csproj|solutionrelative:lg.application\\dtos\\user\\request\\userrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A0194729-162E-4DA7-A693-B753776C7451}|LG.Application\\LG.Application.csproj|c:\\users\\bruno\\desktop\\archivos_principales\\viamatica\\entrenamiento\\loginsystem\\lg.application\\dtos\\person\\response\\personselectresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A0194729-162E-4DA7-A693-B753776C7451}|LG.Application\\LG.Application.csproj|solutionrelative:lg.application\\dtos\\person\\response\\personselectresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A0194729-162E-4DA7-A693-B753776C7451}|LG.Application\\LG.Application.csproj|c:\\users\\bruno\\desktop\\archivos_principales\\viamatica\\entrenamiento\\loginsystem\\lg.application\\dtos\\person\\response\\personresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A0194729-162E-4DA7-A693-B753776C7451}|LG.Application\\LG.Application.csproj|solutionrelative:lg.application\\dtos\\person\\response\\personresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A0194729-162E-4DA7-A693-B753776C7451}|LG.Application\\LG.Application.csproj|c:\\users\\bruno\\desktop\\archivos_principales\\viamatica\\entrenamiento\\loginsystem\\lg.application\\dtos\\person\\request\\personrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A0194729-162E-4DA7-A693-B753776C7451}|LG.Application\\LG.Application.csproj|solutionrelative:lg.application\\dtos\\person\\request\\personrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A0194729-162E-4DA7-A693-B753776C7451}|LG.Application\\LG.Application.csproj|c:\\users\\bruno\\desktop\\archivos_principales\\viamatica\\entrenamiento\\loginsystem\\lg.application\\interfaces\\ipersonapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A0194729-162E-4DA7-A693-B753776C7451}|LG.Application\\LG.Application.csproj|solutionrelative:lg.application\\interfaces\\ipersonapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F166288C-5CA6-4E16-BF99-61C986109A1A}|LG.Api\\LG.Api.csproj|c:\\users\\bruno\\desktop\\archivos_principales\\viamatica\\entrenamiento\\loginsystem\\lg.api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F166288C-5CA6-4E16-BF99-61C986109A1A}|LG.Api\\LG.Api.csproj|solutionrelative:lg.api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F166288C-5CA6-4E16-BF99-61C986109A1A}|LG.Api\\LG.Api.csproj|c:\\users\\bruno\\desktop\\archivos_principales\\viamatica\\entrenamiento\\loginsystem\\lg.api\\controllers\\personcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F166288C-5CA6-4E16-BF99-61C986109A1A}|LG.Api\\LG.Api.csproj|solutionrelative:lg.api\\controllers\\personcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8DA94BC-A4D6-4394-A078-CDF27107D6B6}|LG.Infrastructure\\LG.Infrastructure.csproj|c:\\users\\bruno\\desktop\\archivos_principales\\viamatica\\entrenamiento\\loginsystem\\lg.infrastructure\\persistences\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8DA94BC-A4D6-4394-A078-CDF27107D6B6}|LG.Infrastructure\\LG.Infrastructure.csproj|solutionrelative:lg.infrastructure\\persistences\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8DA94BC-A4D6-4394-A078-CDF27107D6B6}|LG.Infrastructure\\LG.Infrastructure.csproj|c:\\users\\bruno\\desktop\\archivos_principales\\viamatica\\entrenamiento\\loginsystem\\lg.infrastructure\\persistences\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8DA94BC-A4D6-4394-A078-CDF27107D6B6}|LG.Infrastructure\\LG.Infrastructure.csproj|solutionrelative:lg.infrastructure\\persistences\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A0194729-162E-4DA7-A693-B753776C7451}|LG.Application\\LG.Application.csproj|c:\\users\\bruno\\desktop\\archivos_principales\\viamatica\\entrenamiento\\loginsystem\\lg.application\\services\\userapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A0194729-162E-4DA7-A693-B753776C7451}|LG.Application\\LG.Application.csproj|solutionrelative:lg.application\\services\\userapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F166288C-5CA6-4E16-BF99-61C986109A1A}|LG.Api\\LG.Api.csproj|c:\\users\\bruno\\desktop\\archivos_principales\\viamatica\\entrenamiento\\loginsystem\\lg.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F166288C-5CA6-4E16-BF99-61C986109A1A}|LG.Api\\LG.Api.csproj|solutionrelative:lg.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -86,158 +42,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IPersonApplication.cs",
-              "DocumentMoniker": "C:\\Users\\Bruno\\Desktop\\Archivos_principales\\Viamatica\\Entrenamiento\\LoginSystem\\LG.Application\\Interfaces\\IPersonApplication.cs",
-              "RelativeDocumentMoniker": "LG.Application\\Interfaces\\IPersonApplication.cs",
-              "ToolTip": "C:\\Users\\Bruno\\Desktop\\Archivos_principales\\Viamatica\\Entrenamiento\\LoginSystem\\LG.Application\\Interfaces\\IPersonApplication.cs",
-              "RelativeToolTip": "LG.Application\\Interfaces\\IPersonApplication.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-01T04:11:59.736Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "UserSelectResponseDto.cs",
-              "DocumentMoniker": "C:\\Users\\Bruno\\Desktop\\Archivos_principales\\Viamatica\\Entrenamiento\\LoginSystem\\LG.Application\\Dtos\\User\\Response\\UserSelectResponseDto.cs",
-              "RelativeDocumentMoniker": "LG.Application\\Dtos\\User\\Response\\UserSelectResponseDto.cs",
-              "ToolTip": "C:\\Users\\Bruno\\Desktop\\Archivos_principales\\Viamatica\\Entrenamiento\\LoginSystem\\LG.Application\\Dtos\\User\\Response\\UserSelectResponseDto.cs",
-              "RelativeToolTip": "LG.Application\\Dtos\\User\\Response\\UserSelectResponseDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-01T03:13:21.68Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UserResponseDto.cs",
-              "DocumentMoniker": "C:\\Users\\Bruno\\Desktop\\Archivos_principales\\Viamatica\\Entrenamiento\\LoginSystem\\LG.Application\\Dtos\\User\\Response\\UserResponseDto.cs",
-              "RelativeDocumentMoniker": "LG.Application\\Dtos\\User\\Response\\UserResponseDto.cs",
-              "ToolTip": "C:\\Users\\Bruno\\Desktop\\Archivos_principales\\Viamatica\\Entrenamiento\\LoginSystem\\LG.Application\\Dtos\\User\\Response\\UserResponseDto.cs",
-              "RelativeToolTip": "LG.Application\\Dtos\\User\\Response\\UserResponseDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-01T03:13:18.568Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UserRequestDto.cs",
-              "DocumentMoniker": "C:\\Users\\Bruno\\Desktop\\Archivos_principales\\Viamatica\\Entrenamiento\\LoginSystem\\LG.Application\\Dtos\\User\\Request\\UserRequestDto.cs",
-              "RelativeDocumentMoniker": "LG.Application\\Dtos\\User\\Request\\UserRequestDto.cs",
-              "ToolTip": "C:\\Users\\Bruno\\Desktop\\Archivos_principales\\Viamatica\\Entrenamiento\\LoginSystem\\LG.Application\\Dtos\\User\\Request\\UserRequestDto.cs",
-              "RelativeToolTip": "LG.Application\\Dtos\\User\\Request\\UserRequestDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-01T03:13:15.473Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PersonSelectResponseDto.cs",
-              "DocumentMoniker": "C:\\Users\\Bruno\\Desktop\\Archivos_principales\\Viamatica\\Entrenamiento\\LoginSystem\\LG.Application\\Dtos\\Person\\Response\\PersonSelectResponseDto.cs",
-              "RelativeDocumentMoniker": "LG.Application\\Dtos\\Person\\Response\\PersonSelectResponseDto.cs",
-              "ToolTip": "C:\\Users\\Bruno\\Desktop\\Archivos_principales\\Viamatica\\Entrenamiento\\LoginSystem\\LG.Application\\Dtos\\Person\\Response\\PersonSelectResponseDto.cs",
-              "RelativeToolTip": "LG.Application\\Dtos\\Person\\Response\\PersonSelectResponseDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-01T03:13:10.82Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PersonResponseDto.cs",
-              "DocumentMoniker": "C:\\Users\\Bruno\\Desktop\\Archivos_principales\\Viamatica\\Entrenamiento\\LoginSystem\\LG.Application\\Dtos\\Person\\Response\\PersonResponseDto.cs",
-              "RelativeDocumentMoniker": "LG.Application\\Dtos\\Person\\Response\\PersonResponseDto.cs",
-              "ToolTip": "C:\\Users\\Bruno\\Desktop\\Archivos_principales\\Viamatica\\Entrenamiento\\LoginSystem\\LG.Application\\Dtos\\Person\\Response\\PersonResponseDto.cs",
-              "RelativeToolTip": "LG.Application\\Dtos\\Person\\Response\\PersonResponseDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-01T03:13:07.584Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "PersonRequestDto.cs",
-              "DocumentMoniker": "C:\\Users\\Bruno\\Desktop\\Archivos_principales\\Viamatica\\Entrenamiento\\LoginSystem\\LG.Application\\Dtos\\Person\\Request\\PersonRequestDto.cs",
-              "RelativeDocumentMoniker": "LG.Application\\Dtos\\Person\\Request\\PersonRequestDto.cs",
-              "ToolTip": "C:\\Users\\Bruno\\Desktop\\Archivos_principales\\Viamatica\\Entrenamiento\\LoginSystem\\LG.Application\\Dtos\\Person\\Request\\PersonRequestDto.cs",
-              "RelativeToolTip": "LG.Application\\Dtos\\Person\\Request\\PersonRequestDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-01T03:13:03.785Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "GenericRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Bruno\\Desktop\\Archivos_principales\\Viamatica\\Entrenamiento\\LoginSystem\\LG.Infrastructure\\Persistences\\Repositories\\GenericRepository.cs",
-              "RelativeDocumentMoniker": "LG.Infrastructure\\Persistences\\Repositories\\GenericRepository.cs",
-              "ToolTip": "C:\\Users\\Bruno\\Desktop\\Archivos_principales\\Viamatica\\Entrenamiento\\LoginSystem\\LG.Infrastructure\\Persistences\\Repositories\\GenericRepository.cs",
-              "RelativeToolTip": "LG.Infrastructure\\Persistences\\Repositories\\GenericRepository.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAIwCUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-01T02:29:18.968Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Bruno\\Desktop\\Archivos_principales\\Viamatica\\Entrenamiento\\LoginSystem\\LG.Infrastructure\\Persistences\\Repositories\\UserRepository.cs",
-              "RelativeDocumentMoniker": "LG.Infrastructure\\Persistences\\Repositories\\UserRepository.cs",
-              "ToolTip": "C:\\Users\\Bruno\\Desktop\\Archivos_principales\\Viamatica\\Entrenamiento\\LoginSystem\\LG.Infrastructure\\Persistences\\Repositories\\UserRepository.cs",
-              "RelativeToolTip": "LG.Infrastructure\\Persistences\\Repositories\\UserRepository.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-01T02:29:12.545Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "UserApplication.cs",
-              "DocumentMoniker": "C:\\Users\\Bruno\\Desktop\\Archivos_principales\\Viamatica\\Entrenamiento\\LoginSystem\\LG.Application\\Services\\UserApplication.cs",
-              "RelativeDocumentMoniker": "LG.Application\\Services\\UserApplication.cs",
-              "ToolTip": "C:\\Users\\Bruno\\Desktop\\Archivos_principales\\Viamatica\\Entrenamiento\\LoginSystem\\LG.Application\\Services\\UserApplication.cs",
-              "RelativeToolTip": "LG.Application\\Services\\UserApplication.cs",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAIwGIAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-01T02:28:39.911Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\Bruno\\Desktop\\Archivos_principales\\Viamatica\\Entrenamiento\\LoginSystem\\LG.Api\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "LG.Api\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\Bruno\\Desktop\\Archivos_principales\\Viamatica\\Entrenamiento\\LoginSystem\\LG.Api\\Controllers\\UserController.cs",
-              "RelativeToolTip": "LG.Api\\Controllers\\UserController.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAowD0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-01T01:46:03.486Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "PersonController.cs",
-              "DocumentMoniker": "C:\\Users\\Bruno\\Desktop\\Archivos_principales\\Viamatica\\Entrenamiento\\LoginSystem\\LG.Api\\Controllers\\PersonController.cs",
-              "RelativeDocumentMoniker": "LG.Api\\Controllers\\PersonController.cs",
-              "ToolTip": "C:\\Users\\Bruno\\Desktop\\Archivos_principales\\Viamatica\\Entrenamiento\\LoginSystem\\LG.Api\\Controllers\\PersonController.cs",
-              "RelativeToolTip": "LG.Api\\Controllers\\PersonController.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAgwD0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-01T01:45:29.934Z",
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Bruno\\Desktop\\Archivos_principales\\Viamatica\\Entrenamiento\\LoginSystem\\LG.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "LG.Api\\appsettings.json",
+              "ToolTip": "C:\\Users\\Bruno\\Desktop\\Archivos_principales\\Viamatica\\Entrenamiento\\LoginSystem\\LG.Api\\appsettings.json",
+              "RelativeToolTip": "LG.Api\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-10T04:44:31.401Z",
               "EditorCaption": ""
             }
           ]

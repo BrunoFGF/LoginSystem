@@ -12,5 +12,6 @@ namespace LG.Application.Dtos.User.Response
         public int? FailedAttempts { get; set; }
         public PersonResponseDto? Person { get; set; }
         public DateTime AuditCreateDate { get; set; }
+        public string RolName { get; set; } = null!;
     }
 }

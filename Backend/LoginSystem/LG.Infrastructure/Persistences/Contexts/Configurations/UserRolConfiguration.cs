@@ -8,8 +8,9 @@ namespace LG.Infrastructure.Persistences.Contexts.Configurations
     {
         public void Configure(EntityTypeBuilder<UserRol> builder)
         {
-            builder.HasKey(e => new { e.RolId, e.UserId }).HasName("PK__User_rol__285B8E353CFD00A1");
-
+            builder.HasKey(e => new { e.Id, e.UserId }).HasName("PK__User_rol__285B8E353CFD00A1");
+            builder.Property(e => e.Id)
+                .HasColumnName("RolId");
             builder.ToTable("User_rol");
 
             builder.Property(e => e.AuditCreateDate).HasColumnType("datetime");
@@ -26,7 +27,7 @@ namespace LG.Infrastructure.Persistences.Contexts.Configurations
                 .IsUnicode(false);
 
             builder.HasOne(d => d.Rol).WithMany(p => p.UserRols)
-                .HasForeignKey(d => d.RolId)
+                .HasForeignKey(d => d.Id)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_UserRol_Rol");
 

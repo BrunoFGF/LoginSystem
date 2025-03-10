@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace LG.Domain.Entities;
+﻿namespace LG.Domain.Entities;
 
 public partial class RolRolOption
 {

@@ -1,8 +1,9 @@
-﻿using LG.Domain.Entities;
-using LG.Infrastructure.Commons.Bases.Request;
+﻿using LG.Domain.Commons.Bases.Request;
+using LG.Domain.Entities;
+using LG.Domain.Repositories;
+using LG.Domain.Services;
 using LG.Infrastructure.Helpers;
 using LG.Infrastructure.Persistences.Contexts;
-using LG.Infrastructure.Persistences.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Dynamic.Core;
 using System.Linq.Expressions;
@@ -13,11 +14,13 @@ namespace LG.Infrastructure.Persistences.Repositories
     {
         private readonly LoginSystemContext _context;
         private readonly DbSet<T> _entity;
+        private readonly ICurrentSessionService _sessionService;
 
-        public GenericRepository(LoginSystemContext context)
+        public GenericRepository(LoginSystemContext context, ICurrentSessionService sessionService)
         {
             _context = context;
             _entity = _context.Set<T>();
+            _sessionService = sessionService;
         }
 
         public async Task<IEnumerable<T>> GetAllAsync()
@@ -28,17 +31,28 @@ namespace LG.Infrastructure.Persistences.Repositories
             return getAll;
         }
 
-        public async Task<T> GetByIdAsync(int id)
+        public async Task<T> GetByIdAsync(int id, params Expression<Func<T, object>>[] includes)
         {
-            var getById = await _entity!
-                .Where(x =>  x.AuditDeleteUser == null && x.AuditDeleteDate == null)
-                .AsNoTracking().FirstOrDefaultAsync(x => x.Id.Equals(id));
+            var query = _entity!.Where(x => x.AuditDeleteUser == null && x.AuditDeleteDate == null);
+
+            // Aplicar los includes
+            if (includes != null)
+            {
+                foreach (var include in includes)
+                {
+                    query = query.Include(include);
+                }
+            }
+
+            var getById = await query.AsNoTracking().FirstOrDefaultAsync(x => x.Id.Equals(id));
             return getById!;
         }
 
         public async Task<bool> RegisterAsync(T entity)
         {
-            entity.AuditCreateUser = 1;
+            var userId = _sessionService.Get();
+
+            entity.AuditCreateUser = userId;
             entity.AuditCreateDate = DateTime.Now;
 
 
@@ -51,8 +65,17 @@ namespace LG.Infrastructure.Persistences.Repositories
 
         public async Task<bool> EditAsync(T entity)
         {
-            entity.AuditUpdateUser = 1;
+            var userId = _sessionService.Get();
+
+            entity.AuditUpdateUser = userId;
             entity.AuditUpdateDate = DateTime.Now;
+
+            var existingEntity = await _entity.FindAsync(entity.Id);
+
+            if (existingEntity != null)
+            {
+                _context.Entry(existingEntity).State = EntityState.Detached;
+            }
 
             _context.Update(entity);
             _context.Entry(entity).Property(x => x.AuditCreateUser).IsModified = false;
@@ -65,9 +88,11 @@ namespace LG.Infrastructure.Persistences.Repositories
 
         public async Task<bool> RemoveAsync(int id)
         {
+            var userId = _sessionService.Get();
+
             T entity = await GetByIdAsync(id);
 
-            entity!.AuditDeleteUser = 1;
+            entity!.AuditDeleteUser = userId;
             entity.AuditDeleteDate = DateTime.Now;
 
             _context.Update(entity);

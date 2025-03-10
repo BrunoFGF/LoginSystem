@@ -12,6 +12,11 @@
         public const string MESSAGE_VALIDATE = "Errores de validación.";
         public const string MESSAGE_FAILED = "Operación fallida.";
         public const string MESSAGE_USERNAME_EXISTS = "El nombre de usuario ya existe.";
-        public const string MESSAGE_PERSON_NOT_FOUND = "La persona no fue encontrada o no existe";
+        public const string MESSAGE_PERSON_REGISTER_FAILED = "Error al registrar la persona.";
+        public const string MESSAGE_PERSON_IDENTIFICATION_ALREADY_EXISTS = "Ya existe una persona con ese documento de identidad.";
+        public const string MESSAGE_TOKEN = "Token generado correctamente";
+        public const string MESSAGE_TOKEN_ERROR = "El usuario y/o contraseña es incorrecta";
+        public const string MESSAGE_ROL_MUST_BE = "El rol debe ser ADMIN o USER";
+        public const string MESSAGE_ROL_NAME_NOT_FOUND = "El nombre del rol no existe.";
     }
 }
