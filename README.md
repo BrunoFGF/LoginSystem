@@ -7,9 +7,13 @@ Package Manager: npm 10.9.0
 .NET 8.0
 
 # Capturas
-## Usuario Administrador
+## Usuario Admin
 ![Dashboard](./ImagenesAdmin/Dashboard.PNG)
 ![EditarUsuario](./ImagenesAdmin/EditarUsuario.PNG)
 ![GestionDeUsuarios](./ImagenesAdmin/GestionDeUsuarios.PNG)
 ![Perfil](./ImagenesAdmin/Perfil.PNG)
 ![RegistrarUsuario](./ImagenesAdmin/RegistrarUsuario.PNG)
+
+## Usuario User
+![Dashboard](./ImagenesUser/Dashboard.PNG)
+![Perfil](./ImagenesUser/Perfil.PNG)
