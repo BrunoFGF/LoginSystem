@@ -1,10 +1,10 @@
 # LoginSystem
 
 # Versiones
-Angular CLI: 19.2.0
-Node: 22.11.0
-Package Manager: npm 10.9.0
-.NET 8.0
+- Angular CLI: 19.2.0
+- Node: 22.11.0
+- Package Manager: npm 10.9.0
+- .NET 8.0
 
 # Desplegar sistema
 1. Abrir el archivo SQLQuery LoginSystem y correr el script
